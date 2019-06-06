@@ -1,0 +1,45 @@
+{
+  "name": "aaronasuncion",
+  "version": "1.0.0",
+  "description": "Aaron Asuncion Portfolio Website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "node-sass -w scss/ -o dist/css --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "aaronpasuncion"
+  },
+  "keywords": [
+    "aaronpasuncion",
+    "aaron",
+    "asuncion",
+    "paul",
+    "portfolio",
+    "website",
+    "junior",
+    "web",
+    "developer",
+    "jr",
+    "front",
+    "end",
+    "web",
+    "developer",
+    "toronto",
+    "GTA",
+    "html",
+    "css",
+    "html5",
+    "css3",
+    "javascript",
+    "jqery",
+    "scss",
+    "jquery"
+  ],
+  "author": "Aaron Asuncion",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^4.12.0"
+  }
+}

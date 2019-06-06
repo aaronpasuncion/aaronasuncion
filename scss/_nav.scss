@@ -1,0 +1,42 @@
+// Menu Button
+.nav {
+  h1 {
+    position: absolute;
+  }
+}
+.menu-btn {
+  position: absolute; //we want it exactly where we want it to be
+  z-index: 3;
+  right: 35px;
+  top: 35px;
+  cursor: pointer;
+  transition: all 1s ease-in-out;
+
+  .btn-line {
+    width: 28px;
+    height: 3px;
+    margin: 0 0 5px 0;
+    background: #000;
+    transition: all 1s ease-in-out;
+  }
+  //Rotate Into X with Menu Lines
+  &.close {
+    transform: rotate(180deg);
+
+    .btn-line {
+      // Line 1 - Going To Rotate
+      &:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px); //translate(x, y values)
+      }
+      // Line 2 - Hide
+      &:nth-child(2) {
+        opacity: 0;
+      }
+
+      // Line 3 - Rotate
+      &:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px); //translate(x, y values)
+      }
+    }
+  }
+}
