@@ -1,6 +1,7 @@
 @import "nav";
 * {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 body {
   font-family: "Lora", serif;
@@ -36,13 +37,41 @@ h6 {
   }
 }
 
-.title {
+.main-title {
   text-align: center;
   border-top: 1px solid #000;
   border-bottom: 1px solid #000;
   padding: 0.25em;
   margin-bottom: 0;
-  font-size: 3.5em;
+  font-size: 4em;
+  position: relative;
+  &::before {
+    content: "";
+    border-bottom: solid 1px #000;
+    width: 100%;
+    position: absolute;
+    top: 8px;
+    left: 0;
+  }
+  &::after {
+    content: "";
+    border-bottom: solid 1px #000;
+    width: 100%;
+    position: absolute;
+    bottom: 8px;
+    left: 0;
+  }
+}
+
+.title {
+  display: inline-block;
+  border-bottom: 1px solid #000;
+  font-size: 2.75em;
+  font-weight: bold;
+}
+
+.center {
+  text-align: center;
 }
 .flex {
   display: flex;
@@ -57,6 +86,10 @@ h6 {
   align-items: center;
 }
 
+.flex-row {
+  flex-flow: row wrap;
+}
+
 .btn {
   text-decoration: none;
   text-transform: uppercase;
@@ -64,8 +97,124 @@ h6 {
   border: 1px solid #000;
   padding: 0.5em 1em;
   transition: 0.5s all ease-out;
+  font-size: 1.25em;
+  cursor: pointer;
   &:hover {
     background: #000;
     color: #fff;
   }
 }
+
+.content {
+  height: 100%;
+  min-height: 100vh;
+}
+
+//about
+.about-content {
+  margin: 0 auto;
+  flex-wrap: wrap;
+  div {
+    flex-basis: 40%;
+    p {
+      font-size: 1.25em;
+    }
+  }
+  h1 {
+    flex-basis: 20%;
+    font-size: 3em;
+  }
+}
+//about end
+
+//skills
+.bold {
+  font-weight: bold;
+}
+
+.skill-header {
+  padding-right: 1em;
+  border-right: 1px solid #000;
+}
+
+.skill-info {
+  margin-left: 1em;
+}
+
+.skill-summary {
+  flex-basis: 20%;
+  padding-left: 1em;
+  p {
+    font-size: 1.25em;
+  }
+}
+.text-right {
+  text-align: right;
+}
+
+.right-border {
+  border-left: 1px solid #000;
+  padding-right: 1em;
+}
+//skills end
+
+//portfolio
+.box {
+  width: 350px;
+  height: 250px;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  transition: 0.5s all ease-out;
+  &:hover {
+    opacity: 0.8;
+    background: rgba(0, 0, 0, 0.4);
+  }
+}
+
+//portfolio end
+
+//contact
+.contact-form {
+  border-radius: 10px;
+  padding: 3em 1em;
+  //   width: 700px;
+}
+
+.input-box {
+  margin-bottom: 1em;
+}
+
+form {
+  input,
+  textarea {
+    border: none;
+    outline: none;
+    background: none;
+  }
+}
+
+form {
+  span {
+    font-size: 1em;
+    color: #cfcfcf;
+  }
+  input {
+    display: block;
+    width: 100%;
+    margin-top: 5px;
+    padding-bottom: 5px;
+    font-size: 16px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+    text-align: center;
+  }
+  textarea {
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin-top: 5px;
+    padding-bottom: 5px;
+    font-size: 16px;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+  }
+}
+//end contact

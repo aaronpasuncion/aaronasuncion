@@ -1,11 +1,11 @@
 // Menu Button
 .nav {
   h1 {
-    position: absolute;
+    position: fixed;
   }
 }
 .menu-btn {
-  position: absolute; //we want it exactly where we want it to be
+  position: fixed; //we want it exactly where we want it to be
   z-index: 3;
   right: 35px;
   top: 35px;
