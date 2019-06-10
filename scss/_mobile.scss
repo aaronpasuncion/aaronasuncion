@@ -1,0 +1,129 @@
+@include xl {
+}
+
+@include lg {
+  .about-content {
+    h1 {
+      margin-right: 1em;
+    }
+  }
+}
+
+@include md {
+  //home
+  .home-content {
+    .main-title {
+      font-size: 4em;
+      width: 75%;
+    }
+    h2 {
+      font-size: 1.25em;
+    }
+  }
+
+  .skill-section {
+    flex-direction: column;
+  }
+  .skill-summary {
+    flex-basis: 100%;
+  }
+
+  //portfolio
+  .box {
+    flex-basis: 40%;
+  }
+
+  //contact
+
+  form {
+    textarea {
+      width: 300px;
+      height: 150px;
+    }
+    .btn {
+      font-size: 1em;
+    }
+  }
+
+  //footer
+
+  .footer {
+    h2 {
+      font-size: 1em;
+    }
+    .btn {
+      font-size: 1em;
+    }
+  }
+  //global
+  .title {
+    font-size: 2em;
+  }
+  .btn {
+    font-size: 1em;
+  }
+  //nav overlay
+
+  .full-nav {
+    .nav-btn {
+      font-size: 2em;
+    }
+  }
+}
+
+@include sm {
+  //home
+  .home-content {
+    .main-title {
+      font-size: 3em;
+      width: 75%;
+    }
+    h2 {
+      font-size: 1.25em;
+    }
+  }
+
+  //about
+  .about-content {
+    text-align: center;
+    .about-description {
+      padding-left: 0;
+      border-left: none;
+      flex-basis: 100%;
+      p {
+        font-size: 1.25em;
+      }
+    }
+    .about-intro {
+      flex-basis: 100%;
+      .fa-user {
+        display: none;
+      }
+      h1 {
+        display: inline-block;
+        font-size: 1.75em;
+        margin-right: 0;
+        border-bottom: 1px solid #000;
+      }
+    }
+  }
+
+  .skill-section {
+    flex-direction: column;
+  }
+  .skill-summary {
+    flex-basis: 100%;
+    border-left: none;
+  }
+
+  //portfolio
+  .box {
+    flex-basis: 40%;
+  }
+
+  //global
+
+  .btn {
+    font-size: 1em;
+  }
+}

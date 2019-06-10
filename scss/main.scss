@@ -1,4 +1,7 @@
+@import "component";
+@import "base";
 @import "nav";
+@import "layout";
 * {
   box-sizing: border-box;
   scroll-behavior: smooth;
@@ -6,6 +9,8 @@
 body {
   font-family: "Lora", serif;
   background: #eee;
+  margin: 0;
+  padding: 0;
 }
 
 h1,
@@ -90,6 +95,10 @@ h6 {
   flex-flow: row wrap;
 }
 
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
 .btn {
   text-decoration: none;
   text-transform: uppercase;
@@ -114,15 +123,28 @@ h6 {
 .about-content {
   margin: 0 auto;
   flex-wrap: wrap;
-  div {
+  .about-intro {
+    position: relative;
+    flex-basis: 20%;
+    .fa-user {
+      position: absolute;
+      font-size: 10em;
+      z-index: -1;
+      opacity: 0.05;
+      top: 0;
+      left: 25%;
+    }
+    h1 {
+      font-size: 3em;
+    }
+  }
+  .about-description {
     flex-basis: 40%;
+    border-left: 1px solid #000;
+    padding-left: 1em;
     p {
       font-size: 1.25em;
     }
-  }
-  h1 {
-    flex-basis: 20%;
-    font-size: 3em;
   }
 }
 //about end
@@ -152,7 +174,7 @@ h6 {
   text-align: right;
 }
 
-.right-border {
+.left-border {
   border-left: 1px solid #000;
   padding-right: 1em;
 }
@@ -160,8 +182,10 @@ h6 {
 
 //portfolio
 .box {
-  width: 350px;
+  flex-basis: 27%;
+  width: 250px;
   height: 250px;
+  margin: 1em;
   border: 1px solid rgba(0, 0, 0, 0.4);
   cursor: pointer;
   transition: 0.5s all ease-out;
@@ -210,7 +234,8 @@ form {
   textarea {
     display: block;
     text-align: left;
-    width: 100%;
+    width: 400px;
+    height: 200px;
     margin-top: 5px;
     padding-bottom: 5px;
     font-size: 16px;
@@ -218,3 +243,38 @@ form {
   }
 }
 //end contact
+
+//menu overlay
+.hidden {
+  display: none;
+}
+.menu-overlay {
+  display: none;
+  height: 100%;
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  background: #e4e4e4;
+}
+.full-nav {
+  list-style: none;
+  padding-left: 0;
+  li {
+    margin-bottom: 1em;
+  }
+  .nav-btn {
+    text-decoration: none;
+    font-size: 2.5em;
+    color: #000;
+    margin-bottom: 2em;
+    text-transform: uppercase;
+    transition: 0.5s border-bottom ease-in-out;
+    &:hover {
+      border-bottom: 1px solid #000;
+    }
+  }
+}
+//end menu overlay
+@import "mobile";

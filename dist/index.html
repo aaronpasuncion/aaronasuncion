@@ -19,9 +19,9 @@
   </head>
   <body>
     <div class="site-wrapper">
-      <div class="flex home-section">
-        <header class="nav">
-          <h1>A/A</h1>
+      <div class="flex home-section" id="home">
+        <header class="home-header">
+          <h1 class="logo">A/A</h1>
           <div class="menu-btn">
             <div class="btn-line"></div>
             <div class="btn-line"></div>
@@ -33,23 +33,29 @@
             Aaron Asuncion
           </h1>
           <h2>Junior Front End Web Developer</h2>
-          <a href="#" class="btn">explore</a>
+          <a href="#about" class="btn">explore</a>
         </section>
       </div>
       <main>
-        <section class="about-section content" id="about">
+        <section
+          class="flex flex-center flex-col about-section content"
+          id="about"
+        >
           <div class="center">
             <h1 class="title">About me</h1>
           </div>
-          <div class="flex flex-center about-content">
-            <h1>Hi, I'm Aaron</h1>
-            <div>
+          <div class="flex flex-center about-content flex-wrap">
+            <div class="about-intro">
+              <h1>Hi, I'm Aaron</h1>
+              <i class="far fa-user"></i>
+            </div>
+            <div class="about-description">
               <p>
                 I am a Junior Front End Web Developer looking to apply my skills
                 and improve myself as a programmer.
               </p>
               <p>
-                enjoy the challenge that creating websites brings as well as
+                I enjoy the challenge that creating websites brings as well as
                 designing them to the best of my ability. As a young guy, I see
                 a very bright future in my developer career being someone who is
                 willing to make mistakes, adapt from them, and ultimately become
@@ -66,8 +72,8 @@
             <h1 class="title">Skills</h1>
           </div>
 
-          <div class="flex flex-center">
-            <div class="skill-summary right-border">
+          <div class="flex flex-center skill-section">
+            <div class="skill-summary left-border">
               <p>
                 Here is a breif summary of my knowledge in the following
                 languages and technologies. Information may not be accurate as i
@@ -158,19 +164,17 @@
         <i class="fas fa-chevron-up btn" id="toTop"></i>
         <h2>Aaron Asuncion &copy; 2019</h2>
       </footer>
-      <div class="menu-overlay">
-        <div class="flex flex-center">
-          <h1>Aaron Asuncion</h1>
-          <ul>
-            <li><a href="#home">home</a></li>
-            <li><a href="#home">about</a></li>
-            <li><a href="#home">skills</a></li>
-            <li><a href="#home">portfolio</a></li>
-            <li><a href="#home">contact</a></li>
-          </ul>
-        </div>
+      <div class="menu-overlay flex flex-center flex-col">
+        <ul class="full-nav flex flex-center flex-col">
+          <li><a href="#home" class="nav-btn">home</a></li>
+          <li><a href="#about" class="nav-btn">about</a></li>
+          <li><a href="#skills" class="nav-btn">skills</a></li>
+          <li><a href="#portfolio" class="nav-btn">portfolio</a></li>
+          <li><a href="#contact" class="nav-btn">contact</a></li>
+        </ul>
       </div>
     </div>
+    <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

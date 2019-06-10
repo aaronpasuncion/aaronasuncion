@@ -1,7 +1,10 @@
 // Menu Button
-.nav {
-  h1 {
+.home-header {
+  .logo {
     position: fixed;
+    left: 35px;
+    top: 10px;
+    z-index: 3;
   }
 }
 .menu-btn {
