@@ -1,0 +1,30 @@
+//global
+.content-nav {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 2em;
+  h2 {
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+  }
+  &:hover {
+    h2 {
+      opacity: 1;
+    }
+  }
+}
+
+.btn {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000;
+  border: 1px solid #000;
+  padding: 0.5em 1em;
+  transition: 0.5s all ease-out;
+  font-size: 1.25em;
+  cursor: pointer;
+  &:hover {
+    background: #000;
+    color: #fff;
+  }
+}
