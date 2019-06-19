@@ -4,7 +4,8 @@
   margin-bottom: 2em; }
   .content-nav h2 {
     opacity: 0;
-    transition: opacity 0.5s ease-out; }
+    transition: opacity 0.5s ease-out;
+    margin-bottom: 0.25em; }
   .content-nav:hover h2 {
     opacity: 1; }
 
@@ -20,6 +21,41 @@
   .btn:hover {
     background: #000;
     color: #fff; }
+
+.title {
+  display: inline-block;
+  border-bottom: 1px solid #000;
+  font-size: 2.75em;
+  font-weight: bold; }
+
+.box {
+  position: relative;
+  flex-basis: 40%;
+  width: 250px;
+  height: 300px;
+  margin: 1em;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  cursor: pointer; }
+  .box img {
+    z-index: 3;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: 0.5s all ease-out; }
+  .box:hover img {
+    opacity: 0;
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.5); }
+  .box .box-info {
+    position: absolute;
+    z-index: 2; }
+    .box .box-info h2 {
+      margin-bottom: 0; }
+    .box .box-info p {
+      margin-top: 0; }
+    .box .box-info .btn {
+      font-size: 1em;
+      margin-top: 1em; }
 
 .home-header .logo {
   position: fixed;
@@ -73,6 +109,25 @@ h6 {
   height: 100%;
   width: 100%; }
 
+.center {
+  text-align: center; }
+
+.flex {
+  display: flex; }
+
+.flex-col {
+  flex-direction: column; }
+
+.flex-center {
+  justify-content: center;
+  align-items: center; }
+
+.flex-row {
+  flex-flow: row wrap; }
+
+.flex-wrap {
+  flex-wrap: wrap; }
+
 .home-section {
   height: 100%;
   min-height: 100vh; }
@@ -105,31 +160,6 @@ h6 {
     position: absolute;
     bottom: 8px;
     left: 0; }
-
-.title {
-  display: inline-block;
-  border-bottom: 1px solid #000;
-  font-size: 2.75em;
-  font-weight: bold; }
-
-.center {
-  text-align: center; }
-
-.flex {
-  display: flex; }
-
-.flex-col {
-  flex-direction: column; }
-
-.flex-center {
-  justify-content: center;
-  align-items: center; }
-
-.flex-row {
-  flex-flow: row wrap; }
-
-.flex-wrap {
-  flex-wrap: wrap; }
 
 .content {
   height: 100%;
@@ -181,18 +211,6 @@ h6 {
 .left-border {
   border-left: 1px solid #000;
   padding-right: 1em; }
-
-.box {
-  flex-basis: 40%;
-  width: 250px;
-  height: 250px;
-  margin: 1em;
-  border: 1px solid rgba(0, 0, 0, 0.4);
-  cursor: pointer;
-  transition: 0.5s all ease-out; }
-  .box:hover {
-    opacity: 0.8;
-    background: rgba(0, 0, 0, 0.4); }
 
 .contact-form {
   border-radius: 10px;
